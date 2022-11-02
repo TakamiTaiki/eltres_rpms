@@ -46,6 +46,21 @@ function GetMap(){
     map.circleSet(35.646335, 139.523912, 500, style); //1000=1km, 2000=2Km
     map.circleSet(35.636794, 139.540895, 300, style); //1000=1km, 2000=2Km
     map.circleSet(35.633732, 139.553018, 200, style); //1000=1km, 2000=2Km
+    const descript = '<div style="width:1vw;color:red;">危険度：5</div>';
+    const actions =
+        [
+            //1.action
+            {
+                label: '詳細',
+                eventHandler: function () { //function
+                    alert('詳細');
+                }
+            }
+        ];
+    //Create Event to Infobox
+    map.onInfobox(35.646335, 139.523912, "エリアA", descript, actions);
+    map.onInfobox(35.636794, 139.540895, "エリアB", descript, actions);
+    map.onInfobox(35.633732, 139.553018, "エリアC", descript, actions);
 
 
 }
