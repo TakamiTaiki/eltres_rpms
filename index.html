@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Map:Circle geolocation Set</title>
+<title>水みるっす！</title>
 <style>html,body{height:100%;}body{padding:0;margin:0;}h1{padding:0;margin:0;font-size:50%;}</style>
 </head>
 <body>
 
 
 <!-- MAP[START] -->
-<h1>Map:Circle geolocation Set</h1>
-<div id="myMap" style='width:60%;height:70%;float:left;'></div>
+<h1>河川汚染監視システムのプロトタイプ</h1>
+<div id="myMap" style='width:100%;height:90%;float:left;'></div>
 <!-- MAP[END] -->
 
 
@@ -32,7 +32,7 @@ function GetMap(){
     //   startMap(lat, lon, "MapType", Zoom[1~20]);
     //   MapType:[load, aerial,canvasDark,canvasLight,birdseye,grayscale,streetside]
     //--------------------------------------------------
-    map.startMap(35.639679, 139.533469, "load", 12);
+    map.startMap(35.639679, 139.533469, "load", 14);
 
     //------------------------------------------------------------------------
     //3.circle location Set
@@ -41,7 +41,7 @@ function GetMap(){
     const style = {
         pinColor:"#0000ff",
         fillColor:"rgba(0,0,100,0.4)",
-        strokeWidth:10
+        strokeWidth:7
     };
     map.circleSet(35.646335, 139.523912, 2000, style); //1000=1km, 2000=2Km
     map.circleSet(35.636794, 139.540895, 3000, style); //1000=1km, 2000=2Km
